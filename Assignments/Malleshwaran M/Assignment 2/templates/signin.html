@@ -9,18 +9,19 @@
         <div class="jumbotron">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
+                  {{msg}}
                     <div class="panel panel-primary">
                         <div class="panel-heading"><center>signin</center></div>
                         <div class="panel-body">
-                            <form>
+                            <form action="{{ url_for('doSignin') }}" method="POST">
                                 <br>
                                 <div class="form-outline mb-4">
-                                  <input type="email" placeholder="Email" class="form-control" />
+                                  <input type="email" placeholder="Email" class="form-control" name="email"/>
                                 </div>
                               
                                 <br>
                                 <div class="form-outline mb-4">
-                                  <input type="password" placeholder="password" class="form-control" />
+                                  <input type="password" placeholder="password" class="form-control" name="password"/>
                                 </div>
 
                                 <br>
@@ -38,7 +39,7 @@
                                 </div>
                               
                                 <!-- Submit button -->
-                                <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
                               
                                 <!-- Register buttons -->
                               </form>
